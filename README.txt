@@ -19,15 +19,18 @@
 
 Usage:
 
-1.Set UniProt protein sequence database in "database/uniprot_sequence" directory; (Because the size of sequence database is very huge, we didn't include it in this source code package. You may download it from http://www.uniprot.org/downloads) 
+1. Decompress function annotation by 
+   "bunzip2 database/annotations/noiea_confirmed_iea_annotations.txt.bz2"
 
-2.Input sequence of query protein in "in_data/sequences" directory, named with its ID such as "Query1";
+2.Set UniRef90 protein sequence database in "database/uniprot_sequence/uniref90.fasta"; (Because the size of the latest sequence database is very huge, we didn't include it in this source code package. You may download it from http://www.uniprot.org/downloads) 
 
-3.List all IDs of query proteins in "in_data/query_list" file;
+3.Input sequence of query protein in "in_data/sequences" directory, named with its ID such as "Query1";
 
-4.Run "perl src/run.pl #uniprot_db_name#"
+4.List all IDs of query proteins in "in_data/query_list" file;
 
-5.Check "out_data/[MF,BP,CC]/#ID#_final.txt" for prediction result.
+5.Run "perl src/run.pl"
+
+6.Check "out_data/[MF,BP,CC]/#ID#_final.txt" for prediction result.
 
 
 ################################
