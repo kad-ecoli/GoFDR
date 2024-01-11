@@ -27,7 +27,7 @@ while(<B>){
 	}
 }
 close B;
-close O;
+close O1;
 
 open A,"tmp_data/assigned_GO_terms_psibls/$file";
 open O4,">tmp_data/low_assigned_GO_terms_psibls/$file";
@@ -55,6 +55,7 @@ close O4;
 for $k(sort keys %up_go){
 	print O2 $k."\n";
 }
+close O2;
 
 open O3,">tmp_data/max_id/$file";
 for $k(sort keys %g2p){
