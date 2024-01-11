@@ -47,7 +47,8 @@ void get_aln(string gene)
 	while(getline(fin,line))
 	{
 		if(line.find("<BlastOutput_query-len>")==2) qlen=read_value(line,"<BlastOutput_query-len>","</BlastOutput_query-len>");
-		if(line.find("<Hit_def>")==10) name=line.substr(28,6);
+		//if(line.find("<Hit_def>")==10) name=line.substr(28,6);
+		if(line.find("<Hit_id>")==10) name=line.substr(27,6);
 		if(line.find("<Hsp_evalue>")==14 && name!="") e_value=read_value(line,"<Hsp_evalue>","</Hsp_evalue>");
 		if(line.find("<Hsp_query-from>")==14 && name!="") qstart=read_value(line,"<Hsp_query-from>","</Hsp_query-from>");
 		if(line.find("<Hsp_query-to>")==14 && name!="") qend=read_value(line,"<Hsp_query-to>","</Hsp_query-to>");

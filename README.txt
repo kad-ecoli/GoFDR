@@ -23,6 +23,7 @@ Usage:
    "bunzip2 database/annotations/noiea_confirmed_iea_annotations.txt.bz2"
 
 2.Set UniRef90 protein sequence database in "database/uniprot_sequence/uniref90.fasta"; (Because the size of the latest sequence database is very huge, we didn't include it in this source code package. You may download it from http://www.uniprot.org/downloads) 
+  A small subset of UniRef90 proteins are available at "database/uniprot_sequence/uniref90.fasta" as a place holder.
 
 3.Input sequence of query protein in "in_data/sequences" directory, named with its ID such as "Query1";
 
